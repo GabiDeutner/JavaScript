@@ -1,0 +1,235 @@
+body {
+  background-color: #f8fafd;
+  font-family: "Inter", sans- serif;
+  color: #252525;
+  padding: 2rem;
+}
+
+main {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+.hero .title {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 1.5rem;
+}
+.hero .subtitle {
+  font-size: 1.125rem;
+  color: #828282;
+}
+
+.box {
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(132, 148, 165, 0.1);
+  border-radius: 8px;
+  margin-bottom: 3rem;
+}
+
+.password {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.password .text {
+  flex: 1;
+}
+.password .text input {
+  font-family: "Inconsolata", serif;
+  font-size: 3rem;
+  border: none;
+  outline: none;
+  cursor: default;
+  height: 52px;
+  width: 100%;
+  transition: all 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.password .text input.font-sm {
+  font-size: 2rem;
+}
+.password .text input.font-xs {
+  font-size: 1.5rem;
+}
+.password .text input.font-xxs {
+  font-size: 1rem;
+}
+.password .actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.security-indicator {
+  height: 10px;
+  background-color: #ddd;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.security-indicator .bar {
+  height: 10px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  transition: all 0.2s;
+}
+.security-indicator .bar.completed {
+  border-top-right-radius: 0;
+}
+.security-indicator .bar.critical {
+  background-color: #eb5757;
+}
+.security-indicator .bar.warning {
+  background-color: #f2c94c;
+}
+.security-indicator .bar.safe {
+  background-color: #27ae60;
+}
+
+.customize {
+  padding: 1rem 1.5rem;
+}
+.customize .title {
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+}
+.customize .actions {
+  display: flex;
+  gap: 3rem;
+  color: #828282;
+}
+.customize .password-length {
+  flex: 1;
+}
+.customize .password-length .slider {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 10px;
+  background: #dddddd;
+  outline: none;
+  border-radius: 8px;
+  width: 100%;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  margin-top: 1rem;
+}
+.customize .password-length .slider:hover {
+  opacity: 1;
+}
+.customize .password-length .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background: #9b51e0;
+  cursor: pointer;
+}
+.customize .password-length .slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background: #9b51e0;
+  cursor: pointer;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkbox-container input {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkbox-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #dddddd;
+  transition: all 0.2s;
+}
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #cccccc;
+}
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #9b51e0;
+}
+.checkbox-container .checkmark:after {
+  content: "";
+  display: none;
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.submit {
+  text-align: center;
+}
+.submit button {
+  background-color: #bb6bd9;
+  font-size: 1.375rem;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  transition: all 0.2s;
+}
+.submit button:hover {
+  background-color: #9b51e0;
+}
+
+@media only screen and (max-width: 480px) {
+  .password {
+    padding: 1rem;
+  }
+  .password .text input {
+    font-size: 1.5rem;
+  }
+  .password .text input.font-sm {
+    font-size: 1.2rem;
+  }
+  .password .text input.font-xs {
+    font-size: 1rem;
+  }
+  .password .text input.font-xxs {
+    font-size: 1rem;
+  }
+  .password .actions img {
+    width: 24px;
+  }
+}
